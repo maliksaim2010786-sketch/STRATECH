@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-primary: #070d17;
+    --color-bg-secondary: #0b1424;
+    --color-surface: #101c30;
+    --color-surface-hover: #162642;
+    --color-gold: #e5a93c;
+    --color-gold-hover: #f3b94e;
+    --color-gold-dark: #b88220;
+    --color-border-subtle: rgba(255, 255, 255, 0.08);
+    --color-border-gold: rgba(229, 169, 60, 0.25);
+  }
+
+  body {
+    background-color: #070d17;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  * {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070d17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e5a93c;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(13, 22, 38, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(17, 28, 48, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 169, 60, 0.22);
+}
+
+.gold-glow {
+  box-shadow: 0 0 24px -4px rgba(229, 169, 60, 0.25);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f7d58b 0%, #e5a93c 50%, #c48b25 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Interactive Hover utilities */
+.hover-card-glow {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-card-glow:hover {
+  transform: translateY(-6px);
+  border-color: rgba(229, 169, 60, 0.55);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6), 0 0 24px -4px rgba(229, 169, 60, 0.25);
+}
+
+.hover-gold-button {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-gold-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(229, 169, 60, 0.45);
+  filter: brightness(1.08);
+}

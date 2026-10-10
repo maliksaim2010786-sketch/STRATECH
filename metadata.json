@@ -1,0 +1,6 @@
+{
+  "name": "Stratech - Innovative Engineering & Construction",
+  "description": "Enterprise engineering, construction management, architectural project listings, client portal, payments, and admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
