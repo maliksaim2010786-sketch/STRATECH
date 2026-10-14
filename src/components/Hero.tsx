@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
+import heroCitySkyline from '../assets/images/hero_city_skyline_1791630056183.jpg';
 import { 
   ArrowRight, 
   Users, 
@@ -100,10 +101,17 @@ export const Hero: React.FC = () => {
               
               {/* High-fidelity City Skyline Image */}
               <img
-                src="/src/assets/images/hero_city_skyline_1791630056183.jpg"
+                src={heroCitySkyline}
                 alt="Modern engineering city skyline at twilight"
                 className="w-full h-[400px] sm:h-[460px] object-cover object-center transform group-hover:scale-108 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  // Fallback to static public path if needed
+                  const target = e.currentTarget;
+                  if (!target.src.includes('/assets/images/hero_city_skyline')) {
+                    target.src = '/assets/images/hero_city_skyline_1791630056183.jpg';
+                  }
+                }}
               />
 
               {/* Sophisticated dark gradient scrim */}

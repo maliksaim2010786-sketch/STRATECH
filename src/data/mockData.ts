@@ -1,4 +1,10 @@
 import { Project, Product, User, Order, LeadInquiry } from '../types';
+import {
+  heroCitySkyline,
+  aboutArchitecture,
+  projectSkylineTower,
+  projectBridgeInfrastructure,
+} from '../assets/images';
 
 export const INITIAL_PROJECTS: Project[] = [
   {
@@ -10,7 +16,7 @@ export const INITIAL_PROJECTS: Project[] = [
     client: 'Apex Global Real Estate Fund',
     budget: '$340,000,000',
     description: 'An iconic 88-story aerodynamic mixed-use tower engineered with tuned mass dampers, carbon-neutral thermal facades, and hyper-efficient floorplates.',
-    image: '/src/assets/images/project_skyline_tower_1791630081005.jpg',
+    image: projectSkylineTower,
     metrics: [
       { label: 'Height', value: '382 m' },
       { label: 'Floors', value: '88 Levels' },
@@ -34,7 +40,7 @@ export const INITIAL_PROJECTS: Project[] = [
     client: 'Aurora Global Technologies',
     budget: '$165,000,000',
     description: 'A revolutionary architectural masterpiece featuring exposed diagrid steel framing, multi-tier atrium light wells, and smart carbon-negative timber composites.',
-    image: '/src/assets/images/about_architecture_1791630069743.jpg',
+    image: aboutArchitecture,
     metrics: [
       { label: 'Floor Space', value: '85,000 m²' },
       { label: 'Structure', value: 'Hybrid Diagrid' },
@@ -58,7 +64,7 @@ export const INITIAL_PROJECTS: Project[] = [
     client: 'National Department of Transport & Maritime',
     budget: '$225,000,000',
     description: 'A 2.2-kilometer twin pylon cable-stayed arterial bridge built to endure severe seismic and tidal forces while providing seamless 6-lane metropolitan connectivity.',
-    image: '/src/assets/images/project_bridge_infrastructure_1791630091906.jpg',
+    image: projectBridgeInfrastructure,
     metrics: [
       { label: 'Total Span', value: '2,240 m' },
       { label: 'Pylon Elevation', value: '196 m' },
@@ -82,7 +88,7 @@ export const INITIAL_PROJECTS: Project[] = [
     client: 'Stratech Urban Real Estate Consortium',
     budget: '$195,000,000',
     description: 'A high-density civic and commercial urban epicenter integrating sustainable transit corridors, smart subterranean logistics, and multi-functional event plazas.',
-    image: '/src/assets/images/hero_city_skyline_1791630056183.jpg',
+    image: heroCitySkyline,
     metrics: [
       { label: 'Campus Area', value: '140,000 m²' },
       { label: 'Green Canopy', value: '45% Permeable' },
@@ -117,7 +123,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     inStock: true,
     rating: 4.9,
-    image: '/src/assets/images/project_skyline_tower_1791630081005.jpg',
+    image: projectSkylineTower,
   },
   {
     id: 'prod-2',
@@ -154,7 +160,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     inStock: true,
     rating: 5.0,
-    image: '/src/assets/images/project_bridge_infrastructure_1791630091906.jpg',
+    image: projectBridgeInfrastructure,
   },
   {
     id: 'prod-4',
@@ -173,7 +179,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     ],
     inStock: true,
     rating: 4.9,
-    image: '/src/assets/images/about_architecture_1791630069743.jpg',
+    image: aboutArchitecture,
   },
   {
     id: 'prod-5',

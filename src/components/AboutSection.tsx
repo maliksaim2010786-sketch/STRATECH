@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
+import aboutArchitecture from '../assets/images/about_architecture_1791630069743.jpg';
 import { 
   Settings, 
   BarChart3, 
@@ -54,10 +55,16 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-4 relative group cursor-pointer">
             <div className="relative rounded-2xl overflow-hidden border border-white/10 group-hover:border-[#e5a93c]/50 transition-all duration-500 shadow-2xl group-hover:shadow-[0_0_35px_rgba(229,169,60,0.25)]">
               <img
-                src="/src/assets/images/about_architecture_1791630069743.jpg"
+                src={aboutArchitecture}
                 alt="Contemporary commercial headquarters building"
                 className="w-full h-[440px] object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('/assets/images/about_architecture')) {
+                    target.src = '/assets/images/about_architecture_1791630069743.jpg';
+                  }
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#070d17]/80 via-transparent to-transparent pointer-events-none" />
               

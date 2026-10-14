@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Project, Product, Order, LeadInquiry } from '../types';
+import { aboutArchitecture, projectSkylineTower } from '../assets/images';
 import { 
   X, 
   BarChart3, 
@@ -50,7 +51,7 @@ export const AdminDashboard: React.FC = () => {
     client: '',
     budget: '$120,000,000',
     description: '',
-    image: '/src/assets/images/about_architecture_1791630069743.jpg',
+    image: aboutArchitecture,
     status: 'In Progress' as Project['status'],
     specifications: 'Seismic Grade 4, LEED Gold Certified',
   });
@@ -109,7 +110,7 @@ export const AdminDashboard: React.FC = () => {
       client: '',
       budget: '$120,000,000',
       description: '',
-      image: '/src/assets/images/about_architecture_1791630069743.jpg',
+      image: aboutArchitecture,
       status: 'In Progress',
       specifications: 'Seismic Grade 4, LEED Gold Certified',
     });
@@ -130,7 +131,7 @@ export const AdminDashboard: React.FC = () => {
       features: newProduct.features.split(',').map(f => f.trim()),
       inStock: newProduct.inStock,
       rating: newProduct.rating,
-      image: '/src/assets/images/project_skyline_tower_1791630081005.jpg',
+      image: projectSkylineTower,
     });
 
     setShowAddProductModal(false);
